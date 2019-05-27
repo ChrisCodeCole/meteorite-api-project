@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+
 import './styles/SearchBar.css';
 
 function SearchBar(props) {
@@ -35,16 +37,24 @@ function SearchBar(props) {
 
   return (
     <div className="SearchBar">
-      <TextField
-        label="Enter search terms"
-        type="search"
-        margin="normal"
-        onKeyPress={e => handleEnterKeyPress(e)}
-        onInput={e => setInput(e.target.value)}
-      />
-      <Button variant="outlined" color="primary" type="button" onClick={() => handleClick()}>
-        Primary
-      </Button>
+      <Grid container spacing={8} direction="row" justify="center" alignItems="center">
+        <Grid item xs={6}>
+          <TextField
+            className="SearchBar-textfield"
+            label="Enter search terms"
+            type="search"
+            margin="normal"
+            onKeyPress={e => handleEnterKeyPress(e)}
+            onInput={e => setInput(e.target.value)}
+          />
+          {' '}
+        </Grid>
+        <Grid className="SearchBar-button" style={{ marginTop: '1rem' }} item xs={6}>
+          <Button variant="outlined" color="primary" type="button" onClick={() => handleClick()}>
+            Search
+          </Button>
+        </Grid>
+      </Grid>
     </div>
   );
 }

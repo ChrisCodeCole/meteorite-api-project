@@ -18,7 +18,13 @@ function SearchContainer() {
               <SearchBar payload={payload} paginate={paginate} updatePageNumber={updatePageNumber} updateFilteredArray={updateFilteredArray} />
             </Grid>
             <Grid item xs={12}>
-              <SearchResults payload={payload} filteredArray={filteredArray} paginatedArray={paginatedArray} paginate={paginate} updatePageNumber={updatePageNumber} />
+              <SearchResults
+                payload={payload}
+                filteredArray={filteredArray}
+                paginatedArray={paginatedArray}
+                paginate={paginate}
+                updatePageNumber={updatePageNumber}
+              />
             </Grid>
           </Grid>
         </div>

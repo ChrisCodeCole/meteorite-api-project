@@ -1,5 +1,4 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -7,7 +6,6 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import './styles/SearchResults.css';
-import { Tab } from '@material-ui/core';
 
 function SearchResults(props) {
   const { filteredArray } = props;
@@ -16,7 +14,7 @@ function SearchResults(props) {
       <Paper>
         <Table>
           <TableHead>
-            <TableRow>
+            <TableRow style={{ backgroundColor: '#f5efed', border: '1px solid black' }}>
               <TableCell>Name</TableCell>
               <TableCell align="right">Id</TableCell>
               <TableCell align="right">Name Type</TableCell>
@@ -29,8 +27,8 @@ function SearchResults(props) {
             </TableRow>
           </TableHead>
           <TableBody>
-            {filteredArray.map(item => (
-              <TableRow key={item.name}>
+            {filteredArray.map((item, i) => (
+              <TableRow style={i % 2 === 0 ? { backgroundColor: '#E5E4E2' } : null} key={item.name}>
                 <TableCell component="th" scope="row">
                   {item.name}
                 </TableCell>
