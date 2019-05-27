@@ -40,6 +40,7 @@ function SearchBar(props) {
       <Grid container spacing={8} direction="row" justify="center" alignItems="center">
         <Grid item xs={6}>
           <TextField
+            // variant="outlined"
             className="SearchBar-textfield"
             label="Enter search terms"
             type="search"

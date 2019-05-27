@@ -13,6 +13,9 @@ function SearchContainer() {
         payload, paginatedArray, paginate, updatePageNumber, updateFilteredArray, filteredArray,
       }) => (
         <div className="SearchContainer">
+          <div className="SearchContainer-header" style={{ backgroundColor: '#3BB9FF', margin: 0, padding: 0 }}>
+            <h1>Meteorite Explorer</h1>
+          </div>
           <Grid container spacing={8} direction="column" justify="center" alignItems="center">
             <Grid item xs={12}>
               <SearchBar payload={payload} paginate={paginate} updatePageNumber={updatePageNumber} updateFilteredArray={updateFilteredArray} />

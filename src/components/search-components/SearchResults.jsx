@@ -13,8 +13,8 @@ function SearchResults(props) {
     <div className="SearchResults">
       <Paper>
         <Table>
-          <TableHead>
-            <TableRow style={{ backgroundColor: '#f5efed', border: '1px solid black' }}>
+          <TableHead style={{ backgroundColor: '#f5efed', border: '1px solid black' }} borderBottom={1}>
+            <TableRow>
               <TableCell>Name</TableCell>
               <TableCell align="right">Id</TableCell>
               <TableCell align="right">Name Type</TableCell>
