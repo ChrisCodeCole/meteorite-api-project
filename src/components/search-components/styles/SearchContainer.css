@@ -1,2 +1,13 @@
 .SearchContainer {
 }
+
+.SearchContainer-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SearchContainer-h1 {
+  padding: 2rem;
+  font-size: 2rem;
+}
